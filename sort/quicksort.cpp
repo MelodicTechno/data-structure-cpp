@@ -1,4 +1,7 @@
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
+
 using namespace std;
 
 void exchange(int &a, int &b)
@@ -37,11 +40,19 @@ void quicksort(int* array, int p, int r)
 
 int main()
 {
-    int a[] =  {1, 4, 6, 8, 2, 4, 9};
-    quicksort(a, 0, 6);
-    for (int i = 0; i < 7; i++)
+    srand(static_cast<int>(time(0)));
+    const int size = 1000;
+
+    int ra[size];
+    for (int i = 0; i < size; ++i)
     {
-        cout << a[i] << ' ';
+        ra[i] = rand() % 1000;
+    }
+    int a[] =  {1, 4, 6, 8, 2, 4, 9};
+    quicksort(ra, 0, size - 1);
+    for (int i = 0; i < size; i++)
+    {
+        cout << ra[i] << ' ';
     }
     cout << endl;
 }
