@@ -48,7 +48,7 @@ int main()
     {
         ra[i] = rand() % 1000;
     }
-    int a[] =  {1, 4, 6, 8, 2, 4, 9};
+
     quicksort(ra, 0, size - 1);
     for (int i = 0; i < size; i++)
     {
