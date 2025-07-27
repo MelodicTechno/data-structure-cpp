@@ -11,21 +11,30 @@ struct BSTNode
     int val;
 
     BSTNode(int val): val(val), left(nullptr), right(nullptr) {}
+    BSTNode(): val(-INT_MIN), left(nullptr), right(nullptr) {}
 };
 
 
-int bstInsert(BSTNode* t, int k)
+BSTNode* bstInsert(BSTNode* t, int k)
 {
     if (t == nullptr)
     {
         t = new BSTNode(k);
-        return 1;
+        return t;
     }
+    else if (k < t->val)
+    {
+        t->left = bstInsert(t->left, k);
+    }
+    else if (k > t->val)
+    {
+        t->right = bstInsert(t->right, k);
+    }
+    return t;
 }
 
-BSTNode* bstSearch(BSTNode* root, int key)
+BSTNode* bstSearch(BSTNode* t, int key)
 {
-    BSTNode* t = root;
     while (t != nullptr && key != t->val)
     {
         if (key < t->val)
@@ -40,18 +49,35 @@ BSTNode* bstSearch(BSTNode* root, int key)
     return t;
 }
 
-void createBST(BSTNode* root, int* a, int n)
+void createBST(BSTNode*& root, int* a, int n)
 {
+    root = nullptr;
     int i = 0;
     while (i < n)
     {
-        bstInsert(root, a[i]);
+        root = bstInsert(root, a[i]);
         i++;
     }
 }
 
+void traverse(BSTNode* root)
+{
+    if (root == nullptr)
+    {
+        return;
+    }
+    
+    traverse(root->left);
+    cout << root->val << endl;
+    traverse(root->right);
+}
+
 int main()
 {
-    int a[] = {1, 2, 3, 4, 5, 6};
-    
+    int a[] = {45, 24, 53, 12, 24};
+    BSTNode* root = nullptr;
+    createBST(root, a, 5);
+    traverse(root);
+    cout << bstSearch(root, 53) << ": " << bstSearch(root, 53)->val << endl;
+    cout << bstSearch(root, 24) << ": " << bstSearch(root, 24)->val << endl;
 }
