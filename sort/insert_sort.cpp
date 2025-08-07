@@ -10,9 +10,9 @@ void insertSort(int* array, int n)
         if (array[i] < array[i - 1])
         {
             array[0] = array[i];
-            for (int j = i - 1; array[0] < array[j]; --j)
+            for (j = i - 1; array[0] < array[j]; --j)
             {
-                array[j + 1] = array[j];
+                array[j + 1] = array[j];   
             }
             array[j + 1] = array[0];
         }
@@ -22,7 +22,7 @@ void insertSort(int* array, int n)
 int main()
 {
     int a[] = {-99, 38, 65, 97, 76, 13, 27, 49};
-    insertSort(a, 8);
+    insertSort(a, 7);
     for (int i = 1; i < 8; i++)
     {
         cout << a[i] << ' ';
