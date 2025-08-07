@@ -1,4 +1,5 @@
 #include <iostream>
+#define INT_MIN 65531
 
 using namespace std;
 
