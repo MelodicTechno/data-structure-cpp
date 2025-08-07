@@ -33,7 +33,7 @@ void isws(int* a, int n)
 int main()
 {
     int a[] = {-99, 38, 65, 97, 76, 13, 27, 49};
-    isws(a, 7);
+    isws(a, 8);
     for (int i = 1; i < 8; i++)
     {
         cout << a[i] << ' ';

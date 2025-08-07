@@ -22,7 +22,7 @@ void insertSort(int* array, int n)
 int main()
 {
     int a[] = {-99, 38, 65, 97, 76, 13, 27, 49};
-    insertSort(a, 7);
+    insertSort(a, 8);
     for (int i = 1; i < 8; i++)
     {
         cout << a[i] << ' ';
