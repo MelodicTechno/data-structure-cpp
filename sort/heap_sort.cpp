@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+void printHeap(std::vector<int>& a);
+
 void headAdjust(std::vector<int>& a, int k, int n) {
     int temp = a[k];  // Store the root
     
@@ -24,9 +26,11 @@ void headAdjust(std::vector<int>& a, int k, int n) {
 }
 
 void buildMaxHeap(std::vector<int>& a) {
+    std::cout << "building the heap: " << std::endl;
     int n = a.size();
     for (int i = n / 2 - 1; i >= 0; i--) {
         headAdjust(a, i, n);
+        printHeap(a);
     }
 }
 
@@ -46,11 +50,19 @@ void heapSort(std::vector<int>& a) {
     }
 }
 
+void printHeap(std::vector<int>& a) {
+    for (int i = 0; i < a.size(); i++) {
+        std::cout << a[i] << ' ';
+    }
+    std::cout << std::endl;
+}
+
 int main() {
-    std::vector<int> a = {38, 65, 97, 76, 13, 27, 49};
+    std::vector<int> a = {6, 1, 5, 9, 8, 4, 7};
     
     heapSort(a);
     
+    std::cout << "result: " << std::endl;
     for (int i = 0; i < a.size(); i++) {
         std::cout << a[i] << ' ';
     }
