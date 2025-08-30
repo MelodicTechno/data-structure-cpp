@@ -44,7 +44,7 @@ void heapSort(std::vector<int>& a) {
     buildMaxHeap(a);  // First build the max heap
     
     int n = a.size();
-    for (int i = n - 1; i > 0; i--) {
+    for (int i = n - 1; i > 0; i--) { 
         swap(a[0], a[i]);  // Move max to end
         headAdjust(a, 0, i);  // Restore heap property
     }
