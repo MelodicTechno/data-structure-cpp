@@ -1,17 +1,7 @@
 #include "ListNode.h"
 
-struct ListNode {
-    int val;
-    ListNode* next;
+ListNode::ListNode() : val(0), next(nullptr) {}
 
-    ListNode() {
-        this->val = 0;
-        this->next = nullptr;
-    }
+ListNode::ListNode(int val) : val(val), next(nullptr) {}
 
-    ListNode(int val) : val(val) {
-        this->next = nullptr;
-    }
-
-    ListNode(int val, ListNode* next) : val(val), next(next) {}
-};
+ListNode::ListNode(int val, ListNode* next) : val(val), next(next) {}
