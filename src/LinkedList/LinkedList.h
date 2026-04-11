@@ -13,6 +13,8 @@ public:
 
     bool add(int val);
     bool addBack(int val);
+    bool insert(int idx, int val);
+    bool remove(int idx);
     int get(int idx);
     int size();
 };

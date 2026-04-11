@@ -7,4 +7,7 @@ struct ListNode {
     ListNode();
     ListNode(int val);
     ListNode(int val, ListNode* next);
+    ~ListNode() {
+        delete next;
+    }
 };
