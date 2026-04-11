@@ -15,6 +15,7 @@ public:
     bool addBack(int val);
     bool insert(int idx, int val);
     bool remove(int idx);
+    void print();
     int get(int idx);
     int size();
 };

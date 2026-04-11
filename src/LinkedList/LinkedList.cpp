@@ -1,5 +1,6 @@
 #include "LinkedList.h"
 #include "ListNode.h"
+#include <iostream>
 
 bool LinkedList::add(int val) {
     ListNode* nxt = sentinel->next;
@@ -13,16 +14,17 @@ bool LinkedList::add(int val) {
 bool LinkedList::addBack(int val) {
     ListNode* cur = sentinel->next;
     ListNode* nodeNew = new ListNode(val);
-    while(cur) {
+    while(cur->next) {
         cur = cur->next;
     }
     length++;
+    cur->next = nodeNew;
     return true;
 }
 
 int LinkedList::get(int idx) {
     if (idx > length - 1) {
-        return get(length - 1);
+        return get(0);
     }
     int i = 0;
     ListNode* cur = sentinel->next;
@@ -34,4 +36,13 @@ int LinkedList::get(int idx) {
 
 int LinkedList::size() {
     return length;
+}
+
+void LinkedList::print() {
+    ListNode* cur = sentinel->next;
+    while (cur) {
+        std::cout << cur->val << " ";
+        cur = cur->next;
+    }
+    std::cout << std::endl;
 }
