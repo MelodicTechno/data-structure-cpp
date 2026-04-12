@@ -8,7 +8,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_executable(data
     src/main.cpp
     src/LinkedList/LinkedList.cpp
-    src/LinkedList/ListNode.cpp
     src/List/List.cpp
 )
 
