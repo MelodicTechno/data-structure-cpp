@@ -1,4 +1,6 @@
 #include "LinkedList/LinkedList.h"
+#include "Stack/Stack.h"
+
 #include <iostream>
 
 int main() {
@@ -8,5 +10,12 @@ int main() {
     list.addBack(3);
     list.remove(0);
     list.print();
-    std::cout << list.size();
+    std::cout << list.size() << std::endl;
+    Stack st;
+    st.push(1);
+    st.push(2);
+    st.push(3);
+    while (!st.isEmpty()) {
+        std::cout << st.pop() << " ";
+    }
 }

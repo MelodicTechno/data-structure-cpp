@@ -9,6 +9,7 @@ add_executable(data
     src/main.cpp
     src/LinkedList/LinkedList.cpp
     src/List/List.cpp
+    src/Stack/Stack.cpp
 )
 
 target_include_directories(data PRIVATE ${PROJECT_SOURCE_DIR}/src)
