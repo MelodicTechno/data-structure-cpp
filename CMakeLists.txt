@@ -17,8 +17,8 @@ target_include_directories(ds PUBLIC ${PROJECT_SOURCE_DIR}/src)
 add_executable(data src/main.cpp)
 target_link_libraries(data PRIVATE ds)
 
-add_executable(demo_linkedlist src/demos/linkedlist_demo.cpp)
-target_link_libraries(demo_linkedlist PRIVATE ds)
+add_executable(linkedlist src/demos/linkedlist.cpp)
+target_link_libraries(linkedlist PRIVATE ds)
 
-add_executable(demo_stack src/demos/stack_demo.cpp)
-target_link_libraries(demo_stack PRIVATE ds)
+add_executable(stack src/demos/stack.cpp)
+target_link_libraries(stack PRIVATE ds)
