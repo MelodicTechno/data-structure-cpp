@@ -6,6 +6,7 @@ int main() {
     list.add(1);
     list.add(2);
     list.addBack(3);
+    list.remove(0);
     list.print();
     std::cout << list.size();
 }

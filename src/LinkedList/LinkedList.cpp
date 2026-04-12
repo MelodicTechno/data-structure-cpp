@@ -22,6 +22,21 @@ bool LinkedList::addBack(int val) {
     return true;
 }
 
+bool LinkedList::remove(int idx) {
+    if (idx > length - 1 || idx < 0) {
+        return false;
+    }
+    ListNode* cur = sentinel;
+    for (int i = 0; i < idx; ++i) {
+        cur = cur->next;
+    }
+    ListNode* toDelete = cur->next;
+    cur->next = toDelete->next;
+    delete toDelete;
+    --length;
+    return true;
+}
+
 int LinkedList::get(int idx) {
     if (idx > length - 1) {
         return get(0);
