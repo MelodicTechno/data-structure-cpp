@@ -4,10 +4,10 @@
 
 class Stack {
 public:
-    ListNode* sentinel = nullptr;
-    int length = 0;
+    ListNode* sentinel;
+    int length;
 
-    Stack() : sentinel(new ListNode(-1)) {}
+    Stack() : length(0), sentinel(new ListNode(-1)) {}
 
     bool push(int val);
     int pop();
