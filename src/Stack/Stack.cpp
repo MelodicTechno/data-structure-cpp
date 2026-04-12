@@ -6,7 +6,7 @@ bool Stack::push(int val) {
     ListNode* nxt = sentinel->next;
     sentinel->next = elementNew;
     elementNew->next = nxt;
-    length++;
+    ++length;
     return true;
 }
 
@@ -19,13 +19,15 @@ int Stack::peek() {
 }
 
 int Stack::pop() {
-    if (length <= 0) {
+    ListNode* topNode = sentinel->next;
+    if (!topNode) {
         return -1;
     }
-    ListNode* top = sentinel->next;
-    sentinel->next = top->next;
-    length--;
-    return top->val;
+    int res = topNode->val;
+    sentinel->next = topNode->next;
+    --length;
+    delete topNode;
+    return res;
 }
 
 bool Stack::isEmpty() {
