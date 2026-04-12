@@ -1,6 +1,14 @@
-# Data Strcture
+# Data Strctures
 
-## build
+No generics support. Not intended for production use.
+
+## Prerequisites
+
+- Ninja
+- CMake
+- Clang & Clang++
+
+## Build
 
 ```
 cmake -B build -G Ninja

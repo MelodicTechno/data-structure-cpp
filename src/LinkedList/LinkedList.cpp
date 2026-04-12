@@ -12,11 +12,13 @@ bool LinkedList::add(int val) {
 }
 
 bool LinkedList::addBack(int val) {
-    ListNode* cur = sentinel->next;
     ListNode* nodeNew = new ListNode(val);
-    while(cur->next) {
+    ListNode* cur = sentinel;
+
+    while (cur->next) {
         cur = cur->next;
     }
+    
     length++;
     cur->next = nodeNew;
     return true;

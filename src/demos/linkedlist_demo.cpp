@@ -1,0 +1,12 @@
+#include "LinkedList/LinkedList.h"
+#include <iostream>
+
+int main() {
+    LinkedList list;
+    list.add(1);
+    list.add(2);
+    list.addBack(3);
+    list.remove(0);
+    list.print();
+    std::cout << "size=" << list.size() << " first=" << list.get(0) << std::endl;
+}
