@@ -21,4 +21,5 @@ int main() {
     while (!st.isEmpty()) {
         std::cout << st.pop() << " ";
     }
+    std::cout << std::endl;
 }

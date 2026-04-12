@@ -1,5 +1,5 @@
 #include "LinkedList.h"
-#include "ListNode.h"
+#include "common/ListNode.h"
 #include <iostream>
 
 bool LinkedList::add(int val) {

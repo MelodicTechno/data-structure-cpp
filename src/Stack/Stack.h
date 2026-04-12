@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../LinkedList/ListNode.h"
+#include "common/ListNode.h"
 
 class Stack {
 public:

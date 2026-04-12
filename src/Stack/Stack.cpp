@@ -1,5 +1,5 @@
 #include "Stack.h"
-#include "LinkedList/ListNode.h"
+#include "common/ListNode.h"
 
 bool Stack::push(int val) {
     ListNode* elementNew = new ListNode(val);
