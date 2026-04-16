@@ -1,6 +1,5 @@
 #include "Queue/CircleQueue.h"
 #include <iostream>
-#include <ostream>
 
 int main() {
     CircleQueue queue(5);
