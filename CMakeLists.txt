@@ -10,6 +10,7 @@ add_library(ds STATIC
     src/List/List.cpp
     src/Stack/Stack.cpp
     src/Queue/Queue.cpp
+    src/Queue/CircleQueue.cpp
 )
 
 target_include_directories(ds PUBLIC ${PROJECT_SOURCE_DIR}/src)
@@ -22,3 +23,6 @@ target_link_libraries(linkedlist PRIVATE ds)
 
 add_executable(stack src/demo/stack.cpp)
 target_link_libraries(stack PRIVATE ds)
+
+add_executable(circlequeue src/demo/circlequeue.cpp)
+target_link_libraries(circlequeue PRIVATE ds)
