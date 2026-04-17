@@ -8,4 +8,7 @@ int main() {
         q.offer(i);
     }
     std::cout << q.top() << " " << q.tail() << std::endl;
+    std::string s1 = "!";
+    std::string s2 = "!";
+    std::cout << (s1 == s2) << std::endl;
 }
