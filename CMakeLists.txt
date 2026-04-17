@@ -14,6 +14,7 @@ add_library(ds STATIC
     src/Stack/Stack.cpp
     src/Queue/Queue.cpp
     src/Queue/CircleQueue.cpp
+    src/Stack/ListStack.cpp
 )
 
 add_library(vis STATIC
@@ -38,3 +39,6 @@ target_link_libraries(stack PRIVATE ds)
 
 add_executable(circlequeue src/demo/circlequeue.cpp)
 target_link_libraries(circlequeue PRIVATE ds)
+
+add_executable(liststack src/demo/liststack.cpp)
+target_link_libraries(liststack PRIVATE ds)
