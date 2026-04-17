@@ -19,12 +19,13 @@ add_library(ds STATIC
 add_library(vis STATIC
     src/utils/display.cpp
 )
-target_link_libraries(vis PRIVATE Matplot++::matplot)
+target_include_directories(vis PUBLIC ${PROJECT_SOURCE_DIR}/src)
+target_link_libraries(vis PUBLIC Matplot++::matplot)
 
 target_include_directories(ds PUBLIC ${PROJECT_SOURCE_DIR}/src)
 
 add_executable(matplot src/demo/matplot.cpp)
-target_link_libraries(matplot PRIVATE Matplot++::matplot)
+target_link_libraries(matplot PRIVATE vis)
 
 add_executable(data src/main.cpp)
 target_link_libraries(data PRIVATE ds)
