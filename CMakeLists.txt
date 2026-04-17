@@ -16,6 +16,11 @@ add_library(ds STATIC
     src/Queue/CircleQueue.cpp
 )
 
+add_library(vis STATIC
+    src/utils/display.cpp
+)
+target_link_libraries(vis PRIVATE Matplot++::matplot)
+
 target_include_directories(ds PUBLIC ${PROJECT_SOURCE_DIR}/src)
 
 add_executable(matplot src/demo/matplot.cpp)
