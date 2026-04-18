@@ -2,6 +2,8 @@
 
 No generics support. Not intended for production use.
 
+All implemented with C++
+
 ## Prerequisites
 
 ### 3rd Libraries
@@ -16,14 +18,38 @@ No generics support. Not intended for production use.
 
 ## Build
 
+Configure the CmakeList.txt and set the location of your installation of matplot++
+
 ```
-cmake -B build -G Ninja
+set(Matplot++_DIR "path/to/Matplot++")
+```
+
+then
+
+### General
+
+```
+cmake -B build -G Ninja -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release
 cmake --build build
 ```
 
-or
+### Windows
 
 ```
-scripts\setup.bat
+scripts\release.bat
 scripts\build.bat
+```
+
+## Run
+
+### General
+
+```
+build/xxx
+```
+
+### Windows
+
+```
+build\xxx.exe
 ```
