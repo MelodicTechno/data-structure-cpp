@@ -4,6 +4,12 @@ No generics support. Not intended for production use.
 
 ## Prerequisites
 
+### 3rd Libraries
+
+- [Matplot++](https://github.com/alandefreitas/matplotplusplus)
+
+### Build
+
 - Ninja
 - CMake
 - Clang & Clang++

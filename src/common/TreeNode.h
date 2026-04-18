@@ -1,5 +1,7 @@
 #pragma once
 
+// Binary Tree Node. Leetcode call
+
 struct TreeNode {
     int val;
     TreeNode* left = nullptr;
